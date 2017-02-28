@@ -1,3 +1,4 @@
+<!--
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Side--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1388) [![Yalantis](https://github.com/Yalantis/Side-Menu.Android/blob/master/badge.png)](https://yalantis.com/?utm_source=github)
 Side Menu
 ==============
@@ -163,3 +164,4 @@ P.S. We’re going to publish more awesomeness wrapped in code and a tutorial on
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+-->
