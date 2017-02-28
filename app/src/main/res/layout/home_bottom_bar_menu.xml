@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.michaldrabik.tapbarmenulib.TapBarMenu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tapBarMenu"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="24dp"
+    app:tbm_backgroundColor="@color/menu_fragment_background"
+    app:tbm_menuAnchor="bottom">
+
+    <ImageView
+        android:id="@+id/item1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/ic_person"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/item2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/ic_location" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/item3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/ic_thumb_up" />
+
+    <ImageView
+        android:id="@+id/item4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/ic_thumb_down" />
+
+</com.michaldrabik.tapbarmenulib.TapBarMenu>

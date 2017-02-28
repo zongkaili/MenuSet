@@ -11,6 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -19,6 +20,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.michaldrabik.tapbarmenulib.TapBarMenu;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 import com.yalantis.contextmenu.lib.MenuObject;
 import com.yalantis.contextmenu.lib.MenuParams;
@@ -28,6 +30,9 @@ import com.yalantis.contextmenu.lib.interfaces.OnMenuItemLongClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
 import yalantis.com.sidemenu.interfaces.Resourceble;
@@ -48,11 +53,14 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     private FragmentManager fragmentManager;
     private ContextMenuDialogFragment mMenuDialogFragment;
 
+    @Bind(R.id.tapBarMenu)
+    TapBarMenu mTapBarMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         contentFragment = ContentFragment.newInstance(R.drawable.content_music);
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
@@ -275,5 +283,33 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     @Override
     public void onMenuItemLongClick(View clickedView, int position) {
         Toast.makeText(this, "Long clicked on position: " + position, Toast.LENGTH_SHORT).show();
+    }
+
+    @OnClick(R.id.tapBarMenu)
+    public void onMenuButtonClick(){
+        mTapBarMenu.toggle();
+    }
+
+    @OnClick({R.id.item1,R.id.item2,R.id.item3,R.id.item4})
+    public void onMenuItemClick(View view){
+        mTapBarMenu.close();
+        switch (view.getId()){
+            case R.id.item1:
+                Toast.makeText(this,"Item 1 selected",Toast.LENGTH_SHORT).show();
+                Log.i("TAG", "Item 1 selected");
+                break;
+            case R.id.item2:
+                Toast.makeText(this,"Item 2 selected",Toast.LENGTH_SHORT).show();
+                Log.i("TAG", "Item 2 selected");
+                break;
+            case R.id.item3:
+                Toast.makeText(this,"Item 3 selected",Toast.LENGTH_SHORT).show();
+                Log.i("TAG", "Item 3 selected");
+                break;
+            case R.id.item4:
+                Toast.makeText(this,"Item 4 selected",Toast.LENGTH_SHORT).show();
+                Log.i("TAG", "Item 4 selected");
+                break;
+        }
     }
 }

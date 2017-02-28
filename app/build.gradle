@@ -9,7 +9,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,8 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.github.ozodrukh:CircularReveal:1.0.4'
+    compile 'com.jakewharton:butterknife:7.0.1'
     compile project(':library:contextmenu')
     compile project(':library:slidemenu')
+    compile project(':library:tapbarmenu')
 }
