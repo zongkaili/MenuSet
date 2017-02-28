@@ -1,5 +1,6 @@
 package com.kelly.menuset;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -20,6 +21,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.kelly.menuset.coolmenu.CoolActivity;
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 import com.yalantis.contextmenu.lib.MenuObject;
@@ -278,6 +280,11 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     @Override
     public void onMenuItemClick(View clickedView, int position) {
         Toast.makeText(this, "Clicked on position: " + position, Toast.LENGTH_SHORT).show();
+        switch (position){
+            case 1:
+                startActivity(new Intent(this, CoolActivity.class));
+                break;
+        }
     }
 
     @Override

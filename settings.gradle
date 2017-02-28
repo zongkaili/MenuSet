@@ -1,1 +1,1 @@
-include ':app', ':library:slidemenu', ':library:contextmenu', ':library:tapbarmenu'
+include ':app', ':library:slidemenu', ':library:contextmenu', ':library:tapbarmenu', ':library:coolmenu'

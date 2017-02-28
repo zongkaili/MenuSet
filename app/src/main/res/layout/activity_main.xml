@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <io.codetail.widget.RevealFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/container_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,8 +31,6 @@
             android:minHeight="?attr/actionBarSize" />
 
         <include layout="@layout/home_bottom_bar_menu" />
-
-
 
     </io.codetail.widget.RevealFrameLayout>
 
