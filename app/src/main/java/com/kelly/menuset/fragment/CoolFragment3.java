@@ -1,4 +1,4 @@
-package com.kelly.menuset.coolmenu;
+package com.kelly.menuset.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,10 +10,7 @@ import android.view.ViewGroup;
 
 import com.kelly.menuset.R;
 
-/**
- * Created by peijiadi on 16/1/18.
- */
-public class Fragment4 extends Fragment {
+public class CoolFragment3 extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -28,7 +25,7 @@ public class Fragment4 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         System.out.println("create");
-        return inflater.inflate(R.layout.layout4, container, false);
+        return inflater.inflate(R.layout.frag_layout3, container, false);
     }
 
     @Override
@@ -36,4 +33,3 @@ public class Fragment4 extends Fragment {
         super.onActivityCreated(savedInstanceState);
     }
 }
-

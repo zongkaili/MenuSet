@@ -1,4 +1,4 @@
-package com.kelly.menuset.coolmenu;
+package com.kelly.menuset.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.kelly.menuset.R;
 
-public class Fragment2 extends Fragment {
+public class CoolFragment2 extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -20,7 +20,7 @@ public class Fragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.layout2, container, false);
+        return inflater.inflate(R.layout.frag_layout2, container, false);
     }
 
     @Override

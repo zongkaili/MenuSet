@@ -31,4 +31,5 @@ dependencies {
     compile project(':library:slidemenu')
     compile project(':library:tapbarmenu')
     compile project(':library:coolmenu')
+    compile project(':library:snakemenu')
 }

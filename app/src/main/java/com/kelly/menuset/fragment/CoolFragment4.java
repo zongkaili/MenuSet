@@ -1,4 +1,4 @@
-package com.kelly.menuset.coolmenu;
+package com.kelly.menuset.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,7 +10,15 @@ import android.view.ViewGroup;
 
 import com.kelly.menuset.R;
 
-public class Fragment1 extends Fragment {
+/**
+ * Created by peijiadi on 16/1/18.
+ */
+public class CoolFragment4 extends Fragment {
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,17 +27,13 @@ public class Fragment1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout1, container, false);
-        return view;
+        System.out.println("create");
+        return inflater.inflate(R.layout.frag_layout4, container, false);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-    }
 }
+

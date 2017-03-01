@@ -1,4 +1,4 @@
-package com.kelly.menuset.coolmenu;
+package com.kelly.menuset.activity;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -11,6 +11,10 @@ import android.widget.Button;
 
 import com.dxtt.coolmenu.CoolMenuFrameLayout;
 import com.kelly.menuset.R;
+import com.kelly.menuset.fragment.CoolFragment1;
+import com.kelly.menuset.fragment.CoolFragment2;
+import com.kelly.menuset.fragment.CoolFragment3;
+import com.kelly.menuset.fragment.CoolFragment4;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,10 +44,10 @@ public class CoolActivity extends AppCompatActivity {
         coolMenuFrameLayout.setTitles(titleList);
 //        coolMenuFrameLayout.setMenuIcon(R.drawable.menu2);
 
-        fragments.add(new Fragment1());
-        fragments.add(new Fragment2());
-        fragments.add(new Fragment3());
-        fragments.add(new Fragment4());
+        fragments.add(new CoolFragment1());
+        fragments.add(new CoolFragment2());
+        fragments.add(new CoolFragment3());
+        fragments.add(new CoolFragment4());
 
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override

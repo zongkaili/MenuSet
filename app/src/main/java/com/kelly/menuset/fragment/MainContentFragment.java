@@ -14,7 +14,7 @@ import com.kelly.menuset.R;
 
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 
-public class ContentFragment extends Fragment implements ScreenShotable {
+public class MainContentFragment extends Fragment implements ScreenShotable {
     public static final String CLOSE = "Close";
     public static final String BUILDING = "Building";
     public static final String BOOK = "Book";
@@ -29,8 +29,8 @@ public class ContentFragment extends Fragment implements ScreenShotable {
     protected int res;
     private Bitmap bitmap;
 
-    public static ContentFragment newInstance(int resId) {
-        ContentFragment contentFragment = new ContentFragment();
+    public static MainContentFragment newInstance(int resId) {
+        MainContentFragment contentFragment = new MainContentFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(Integer.class.getName(), resId);
         contentFragment.setArguments(bundle);
@@ -70,7 +70,7 @@ public class ContentFragment extends Fragment implements ScreenShotable {
                         containerView.getHeight(), Bitmap.Config.ARGB_8888);
                 Canvas canvas = new Canvas(bitmap);
                 containerView.draw(canvas);
-                ContentFragment.this.bitmap = bitmap;
+                MainContentFragment.this.bitmap = bitmap;
             }
         };
 

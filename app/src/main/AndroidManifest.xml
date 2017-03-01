@@ -18,8 +18,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".coolmenu.CoolActivity"
+        <activity android:name=".activity.CoolActivity"
             android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".activity.SnakeActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

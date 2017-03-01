@@ -21,7 +21,8 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.kelly.menuset.coolmenu.CoolActivity;
+import com.kelly.menuset.activity.CoolActivity;
+import com.kelly.menuset.activity.SnakeActivity;
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 import com.yalantis.contextmenu.lib.MenuObject;
@@ -40,7 +41,7 @@ import io.codetail.animation.ViewAnimationUtils;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 import yalantis.com.sidemenu.model.SlideMenuItem;
-import com.kelly.menuset.fragment.ContentFragment;
+import com.kelly.menuset.fragment.MainContentFragment;
 import yalantis.com.sidemenu.util.ViewAnimator;
 
 
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private List<SlideMenuItem> list = new ArrayList<>();
-    private ContentFragment contentFragment;
+    private MainContentFragment contentFragment;
     private ViewAnimator viewAnimator;
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        contentFragment = ContentFragment.newInstance(R.drawable.content_music);
+        contentFragment = MainContentFragment.newInstance(R.drawable.content_music);
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content_frame, contentFragment)
@@ -144,21 +145,21 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private void createMenuList() {
-        SlideMenuItem menuItem0 = new SlideMenuItem(ContentFragment.CLOSE, R.drawable.icn_close);
+        SlideMenuItem menuItem0 = new SlideMenuItem(MainContentFragment.CLOSE, R.drawable.icn_close);
         list.add(menuItem0);
-        SlideMenuItem menuItem = new SlideMenuItem(ContentFragment.BUILDING, R.drawable.icn_1);
+        SlideMenuItem menuItem = new SlideMenuItem(MainContentFragment.BUILDING, R.drawable.icn_1);
         list.add(menuItem);
-        SlideMenuItem menuItem2 = new SlideMenuItem(ContentFragment.BOOK, R.drawable.icn_2);
+        SlideMenuItem menuItem2 = new SlideMenuItem(MainContentFragment.BOOK, R.drawable.icn_2);
         list.add(menuItem2);
-        SlideMenuItem menuItem3 = new SlideMenuItem(ContentFragment.PAINT, R.drawable.icn_3);
+        SlideMenuItem menuItem3 = new SlideMenuItem(MainContentFragment.PAINT, R.drawable.icn_3);
         list.add(menuItem3);
-        SlideMenuItem menuItem4 = new SlideMenuItem(ContentFragment.CASE, R.drawable.icn_4);
+        SlideMenuItem menuItem4 = new SlideMenuItem(MainContentFragment.CASE, R.drawable.icn_4);
         list.add(menuItem4);
-        SlideMenuItem menuItem5 = new SlideMenuItem(ContentFragment.SHOP, R.drawable.icn_5);
+        SlideMenuItem menuItem5 = new SlideMenuItem(MainContentFragment.SHOP, R.drawable.icn_5);
         list.add(menuItem5);
-        SlideMenuItem menuItem6 = new SlideMenuItem(ContentFragment.PARTY, R.drawable.icn_6);
+        SlideMenuItem menuItem6 = new SlideMenuItem(MainContentFragment.PARTY, R.drawable.icn_6);
         list.add(menuItem6);
-        SlideMenuItem menuItem7 = new SlideMenuItem(ContentFragment.MOVIE, R.drawable.icn_7);
+        SlideMenuItem menuItem7 = new SlideMenuItem(MainContentFragment.MOVIE, R.drawable.icn_7);
         list.add(menuItem7);
     }
 
@@ -244,7 +245,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
 
         findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
-        ContentFragment contentFragment = ContentFragment.newInstance(this.res);
+        MainContentFragment contentFragment = MainContentFragment.newInstance(this.res);
         fragmentManager.beginTransaction().replace(R.id.content_frame, contentFragment).commit();
         return contentFragment;
     }
@@ -252,7 +253,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     @Override
     public ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position) {
         switch (slideMenuItem.getName()) {
-            case ContentFragment.CLOSE:
+            case MainContentFragment.CLOSE:
                 return screenShotable;
             default:
                 return replaceFragment(screenShotable, position);
@@ -283,6 +284,9 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
         switch (position){
             case 1:
                 startActivity(new Intent(this, CoolActivity.class));
+                break;
+            case 2:
+                startActivity(new Intent(this, SnakeActivity.class));
                 break;
         }
     }
