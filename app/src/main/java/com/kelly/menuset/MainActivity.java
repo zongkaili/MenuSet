@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.kelly.menuset.activity.CoolActivity;
+import com.kelly.menuset.activity.PerseiActivity;
 import com.kelly.menuset.activity.SnakeActivity;
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
@@ -287,6 +288,9 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
                 break;
             case 2:
                 startActivity(new Intent(this, SnakeActivity.class));
+                break;
+            case 3:
+                startActivity(new Intent(this, PerseiActivity.class));
                 break;
         }
     }

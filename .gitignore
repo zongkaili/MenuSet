@@ -46,3 +46,7 @@ build/
 .gradle
 
 # linux
+.gitignore
+build.gradle
+proguard-rules.pro
+src/
