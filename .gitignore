@@ -28,7 +28,6 @@ log*.txt
 # archives
 *.gz
 *.tar
-*.zip
 
 # eclipse
 *.metadata
@@ -46,7 +45,3 @@ build/
 .gradle
 
 # linux
-.gitignore
-build.gradle
-proguard-rules.pro
-src/

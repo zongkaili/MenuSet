@@ -25,8 +25,7 @@
         <activity android:name=".activity.SnakeActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".activity.PerseiActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activity.PerseiActivity">
         </activity>
     </application>
 
