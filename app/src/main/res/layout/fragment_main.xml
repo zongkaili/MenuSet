@@ -12,7 +12,7 @@
         <ImageView
             android:scaleType="fitXY"
             android:id="@+id/image_content"
-            android:src="@drawable/content_films"
+            android:src="@drawable/home_bg1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

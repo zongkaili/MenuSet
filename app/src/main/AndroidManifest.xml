@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".activity.PerseiActivity">
         </activity>
+        <activity android:name=".activity.SlideActivity">
+        </activity>
     </application>
 
 </manifest>

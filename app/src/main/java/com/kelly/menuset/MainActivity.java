@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.kelly.menuset.activity.CoolActivity;
 import com.kelly.menuset.activity.PerseiActivity;
+import com.kelly.menuset.activity.SlideActivity;
 import com.kelly.menuset.activity.SnakeActivity;
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     private List<SlideMenuItem> list = new ArrayList<>();
     private MainContentFragment contentFragment;
     private ViewAnimator viewAnimator;
-    private int res = R.drawable.content_music;
+    private int res = R.drawable.home_bg1;
     private LinearLayout linearLayout;
     private FragmentManager fragmentManager;
     private ContextMenuDialogFragment mMenuDialogFragment;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        contentFragment = MainContentFragment.newInstance(R.drawable.content_music);
+        contentFragment = MainContentFragment.newInstance(R.drawable.home_bg1);
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content_frame, contentFragment)
@@ -237,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private ScreenShotable replaceFragment(ScreenShotable screenShotable, int topPosition) {
-        this.res = this.res == R.drawable.content_music ? R.drawable.content_films : R.drawable.content_music;
+        this.res = this.res == R.drawable.home_bg1 ? R.drawable.home_bg2 : R.drawable.home_bg1;
         View view = findViewById(R.id.content_frame);
         int finalRadius = Math.max(view.getWidth(), view.getHeight());
         SupportAnimator animator = ViewAnimationUtils.createCircularReveal(view, 0, topPosition, 0, finalRadius);
@@ -291,6 +292,9 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
                 break;
             case 3:
                 startActivity(new Intent(this, PerseiActivity.class));
+                break;
+            case 4:
+                startActivity(new Intent(this, SlideActivity.class));
                 break;
         }
     }

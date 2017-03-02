@@ -7,4 +7,9 @@
     <string name="drawer_close">Close</string>
     <string name="context_menu">Context menu</string>
 
+    <string name="item1">第一个item</string>
+    <string name="item2">第二个item</string>
+    <string name="item3">第三个item</string>
+    <string name="item4">第四个item</string>
+
 </resources>
